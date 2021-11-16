@@ -210,7 +210,11 @@ t_result <- t.test(anxiety_mean~native,
 
 
 ```{r}
-
+pwr.t.test(d = .2,
+           power = .8,
+           sig.level = .05,
+           alternative = "two.sided",
+           type = "two.sample")
 ```
 
 
