@@ -210,7 +210,10 @@ t_result <- t.test(anxiety_mean~native,
            power = .8,
            sig.level = .05,
            alternative = "greater",
-           type = "two.sample")
+           type = "two.sample")%>%
+           pluck("n") %>%
+  ceiling()
+```
 
 ```
 
