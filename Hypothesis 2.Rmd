@@ -203,7 +203,11 @@ t_result <- t.test(anxiety_mean~native,
        paired = FALSE,
        data = dat_summary,
        alternative = "less") %>%
-  tidy ()
+pwr.t.test(d = .2,
+           power = .8,
+           sig.level = .05,
+           alternative = "two.sided",
+           type = "two.sample")
 ```
 
 
